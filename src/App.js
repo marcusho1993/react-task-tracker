@@ -1,11 +1,14 @@
 import './App.css';
+import Header from './components/Header';
+import Tasks from './components/Tasks';
 
-function App() {
+const App = () => {
 	return (
-		<div className='App'>
-			<h1>Hello From React</h1>
+		<div className='container'>
+			<Header />
+			<Tasks />
 		</div>
 	);
-}
+};
 
 export default App;
