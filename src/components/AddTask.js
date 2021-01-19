@@ -1,25 +1,25 @@
-import { useState } from 'react';
-import PropTypes from 'prop-types';
+import { useState } from 'react'
+import PropTypes from 'prop-types'
 
 const AddTask = ({ onAdd }) => {
-	const [text, setTask] = useState('');
-	const [day, setDay] = useState('');
-	const [reminder, setReminder] = useState(false);
+	const [text, setTask] = useState('')
+	const [day, setDay] = useState('')
+	const [reminder, setReminder] = useState(false)
 
 	const onSubmit = e => {
-		e.preventDefault();
+		e.preventDefault()
 
 		if (!text) {
-			alert('Please add a task');
-			return;
+			alert('Please add a task')
+			return
 		}
 
-		onAdd({ text, day, reminder });
+		onAdd({ text, day, reminder })
 
-		setTask('');
-		setDay('');
-		setReminder(false);
-	};
+		setTask('')
+		setDay('')
+		setReminder(false)
+	}
 
 	return (
 		<form className='add-form' onSubmit={onSubmit}>
@@ -53,11 +53,11 @@ const AddTask = ({ onAdd }) => {
 
 			<input type='submit' value='Save' className='btn btn-block' />
 		</form>
-	);
-};
+	)
+}
 
 AddTask.propTypes = {
 	onAdd: PropTypes.func,
-};
+}
 
-export default AddTask;
+export default AddTask
